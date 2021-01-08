@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Knot a Bene</title>
+  <link rel="stylesheet" href="style_home.css">
+  <link rel="stylesheet" href="layouts.css">
+  <script src="https://kit.fontawesome.com/b0dbc57782.js" crossorigin="anonymous"></script>
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link
+    href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,800;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+    rel="stylesheet">
+</head>
+
+<body>
+  <header>
+    <!-- Logo goes here, I haven't got SVG -->
+    <figure>
+      <img src="/photos/Knotab.png" alt="Knot a Bene logo.">
+    </figure>
+
+    <!-- Navigation -->
+    <nav>
+      <ul><a href="index.html" class="active-link">Home</a></ul>
+      <ul><a href="#">Archive</a></ul>
+      <ul><a href="#">Contact</a></ul>
+    </nav>
+
+    <!-- Social icons -->
+    <div class="soc-icons" id="nav-soc">
+      <ul><a href="https://www.instagram.com/knot_a_bene/" target="_blank"><i class="fab fa-instagram-square"></i></a></ul>
+      <ul><a href="https://www.facebook.com/" target="_blank"></a><i class="fab fa-facebook-square"></i></ul>
+      <ul><a href="https://twitter.com/explore" target="_blank"></a><i class="fab fa-twitter-square"></i></ul>
+    </div>
+  </header>
+
+  <!-- Content pasrt of the site below. general layout in grid, contents of the cards set in flex -->
+  <div id="container-home">
+    <section id="welcome">
+      <h2>Hi, I'm joanna.<br> Welcome to my macramé blog!</h2>
+      <figure>
+        <img src="/photos/joanna.jpg" alt="Joanna's portrait.">
+      </figure>
+      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eum ipsam asperiores numquam repudiandae obcaecati cum
+        exercitationem minus quod inventore expedita.</p>
+    </section>
+
+    <!-- Most current post displyed here, taking largest part of screen, use imagae as background in css  -->
+    <main id="last-post">
+      <h1>Post 1</h1>
+      <p class="date">08 January 2021</p>
+      <p class="authot-tag">by: Joanna</p>
+      <p class="inro-txt">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsa provident maxime suscipit
+        dignissimos explicabo mollitia, cumque ducimus adipisci nihil officiis accusantium in magnam veniam eos
+        doloribus voluptas laborum, sed accusamus?</p>
+      <div class="read-btn"><a href="post.html" target="_blank">Read More</a></div>
+    </main>
+
+    <!-- space for recent posts displayed on cards, subscribe -->
+    <aside id="recent-posts">
+
+      <!-- Subscribe Card -->
+      <div id="subscribe">
+        <h2>Subscribe to my newsleter</h2>
+        <form action="/action_page.php">
+          <label for="name">Your name:</label><br>
+          <input type="text" id="name" name="name" value="John Doe"><br>
+          <label for="email">Your email:</label><br>
+          <input type="email" id="email" name="email" value="johndoe@email.com"><br><br>
+          <input type="submit" value="Subscribe">
+        </form>
+        </form>
+      </div>
+
+      <!-- Recent post cards go here, the two below are with picture-->
+      <div class="card" id="rp-1">
+        <div class="p-image"><img src="/photos/book.jpg" alt="Photo of a recommended book"></div>
+        <div class="p-txt">
+          <h2>
+            Post title
+          </h2>
+          <p class="date">31 December 2020</p>
+          <p class="authot-tag">by: Joanna</p>
+          <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Labore est veritatis perferendis magni sit
+            maiores!</p>
+          <div class="read-btn"><a href="#" target="_blank">Read More</a></div>
+        </div>
+      </div>
+
+      <div class="card" id="rp-2">
+        <div class="p-image"><img src="/photos/hanging.jpg" alt="Photo of a recommended book"></div>
+        <div class="p-txt">
+          <h2>
+            Post title
+          </h2>
+          <p class="date">23 December 2020</p>
+          <p class="authot-tag">by: Joanna</p>
+          <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Labore est veritatis perferendis magni sit
+            maiores!</p>
+          <div class="read-btn"><a href="#" target="_blank">Read More</a></div>
+        </div>
+      </div>
+
+      <!-- the third post will be on darker background without picture -->
+
+      <div class="card" id="rp-3">
+        <div class="p-txt">
+          <h2>
+            Post title
+          </h2>
+          <p class="date">25 November 2020</p>
+          <p class="authot-tag">by: Joanna</p>
+          <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Labore est veritatis perferendis magni sit
+            maiores!</p>
+          <div class="read-btn"><a href="#" target="_blank">Read More</a></div>
+        </div>
+      </div>
+    </aside>
+
+    <!-- Contact form -->
+    <div class="cont-form">
+      <form action="#">
+
+        <label for="fname">First Name</label>
+        <input type="text" id="fname" name="firstname" placeholder="Your name..">
+
+        <label for="lname">Last Name</label>
+        <input type="text" id="lname" name="lastname" placeholder="Your last name..">
+
+        <label for="subject">Your message</label>
+        <textarea id="subject" name="subject" placeholder="Write something.."></textarea>
+
+        <input type="submit" value="Send">
+
+      </form>
+    </div>
+
+
+
+  </div>
+  <footer>
+    <div class="ft-txt">
+      <figure>
+        <img src="/photos/Knotab-foot.png" alt="Knot a Bene logo.">
+      </figure>
+      <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Debitis aspernatur perferendis excepturi aperiam
+        ipsum laborum veniam unde quisquam pariatur. Magnam nisi beatae veniam officia quam numquam excepturi hic quos
+        dolorem?</p>
+    </div>
+    <div>
+      <p class="ft-copy"><i class="far fa-copyright"></i>by Knot a Bene, 2021, All Rights Reserved</p>
+    </div>
+    <div class="soc-icons" id="ft-social">
+      <ul><a href="https://www.instagram.com/knot_a_bene/" target="_blank"><i class="fab fa-instagram-square"></i></a></ul>
+      <ul><a href="https://www.facebook.com/" target="_blank"></a><i class="fab fa-facebook-square"></i></ul>
+      <ul><a href="https://twitter.com/explore" target="_blank"></a><i class="fab fa-twitter-square"></i></ul>
+    </div>
+  </footer>
+</body>
+
+</html>
