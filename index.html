@@ -17,32 +17,33 @@
 <body>
   <header>
     <!-- Logo goes here, I haven't got SVG -->
-    <figure>
-      <img src="/photos/Knotab.png" alt="Knot a Bene logo.">
-    </figure>
+
+    <img src="/photos/Knotab.png" alt="Knot a Bene logo." id="head-logo">
 
     <!-- Navigation -->
-    <nav>
+    <nav id="main-nav">
       <ul><a href="index.html" class="active-link">Home</a></ul>
       <ul><a href="#">Archive</a></ul>
       <ul><a href="#">Contact</a></ul>
     </nav>
 
     <!-- Social icons -->
-    <div class="soc-icons" id="nav-soc">
-      <ul><a href="https://www.instagram.com/knot_a_bene/" target="_blank"><i class="fab fa-instagram-square"></i></a></ul>
-      <ul><a href="https://www.facebook.com/" target="_blank"></a><i class="fab fa-facebook-square"></i></ul>
-      <ul><a href="https://twitter.com/explore" target="_blank"></a><i class="fab fa-twitter-square"></i></ul>
+    <div id="nav-soc">
+
+      <ul>
+        <li><a href="https://www.instagram.com/knot_a_bene/" target="_blank"><i class="fab fa-instagram-square"></i></a>
+        </li>
+        <li><a href="https://www.facebook.com/" target="_blank"><i class="fab fa-facebook-square"></i></a></li>
+        <li><a href="https://twitter.com/explore" target="_blank"><i class="fab fa-twitter-square"></i></a></li>
+      </ul>
     </div>
   </header>
 
   <!-- Content pasrt of the site below. general layout in grid, contents of the cards set in flex -->
   <div id="container-home">
     <section id="welcome">
-      <h2>Hi, I'm joanna.<br> Welcome to my macramé blog!</h2>
-      <figure>
-        <img src="/photos/joanna.jpg" alt="Joanna's portrait.">
-      </figure>
+      <h2>Hi, I'm Joanna.<br> <span class="bold">Welcome</span> to my macramé blog!</h2>
+      <img src="/photos/joanna.jpg" alt="Joanna's portrait.">
       <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eum ipsam asperiores numquam repudiandae obcaecati cum
         exercitationem minus quod inventore expedita.</p>
     </section>
@@ -52,10 +53,11 @@
       <h1>Post 1</h1>
       <p class="date">08 January 2021</p>
       <p class="authot-tag">by: Joanna</p>
+      <div class="p-image"><img src="/photos/makramka.jpg" alt="Photo of a recommended book"></div>
       <p class="inro-txt">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsa provident maxime suscipit
         dignissimos explicabo mollitia, cumque ducimus adipisci nihil officiis accusantium in magnam veniam eos
         doloribus voluptas laborum, sed accusamus?</p>
-      <div class="read-btn"><a href="post.html" target="_blank">Read More</a></div>
+      <a href="post.html" target="_blank" class="btn">Read More</a>
     </main>
 
     <!-- space for recent posts displayed on cards, subscribe -->
@@ -64,47 +66,46 @@
       <!-- Subscribe Card -->
       <div id="subscribe">
         <h2>Subscribe to my newsleter</h2>
-        <form action="/action_page.php">
+        <form action="#">
           <label for="name">Your name:</label><br>
           <input type="text" id="name" name="name" value="John Doe"><br>
           <label for="email">Your email:</label><br>
           <input type="email" id="email" name="email" value="johndoe@email.com"><br><br>
-          <input type="submit" value="Subscribe">
+          <input class="btn" type="submit" value="Subscribe">
         </form>
         </form>
       </div>
 
       <!-- Recent post cards go here, the two below are with picture-->
       <div class="card" id="rp-1">
+        <h2>
+          Post title
+        </h2>
+        <p class="date">31 December 2020</p>
+        <p class="authot-tag">by: Joanna</p>
         <div class="p-image"><img src="/photos/book.jpg" alt="Photo of a recommended book"></div>
         <div class="p-txt">
-          <h2>
-            Post title
-          </h2>
-          <p class="date">31 December 2020</p>
-          <p class="authot-tag">by: Joanna</p>
           <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Labore est veritatis perferendis magni sit
             maiores!</p>
-          <div class="read-btn"><a href="#" target="_blank">Read More</a></div>
+          <a href="#" target="_blank" class="btn">Read More</a>
         </div>
       </div>
 
       <div class="card" id="rp-2">
+        <h2>
+          Post title
+        </h2>
+        <p class="date">31 December 2020</p>
+        <p class="authot-tag">by: Joanna</p>
         <div class="p-image"><img src="/photos/hanging.jpg" alt="Photo of a recommended book"></div>
         <div class="p-txt">
-          <h2>
-            Post title
-          </h2>
-          <p class="date">23 December 2020</p>
-          <p class="authot-tag">by: Joanna</p>
           <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Labore est veritatis perferendis magni sit
             maiores!</p>
-          <div class="read-btn"><a href="#" target="_blank">Read More</a></div>
+          <a href="#" target="_blank" class="btn">Read More</a>
         </div>
       </div>
 
       <!-- the third post will be on darker background without picture -->
-
       <div class="card" id="rp-3">
         <div class="p-txt">
           <h2>
@@ -114,7 +115,7 @@
           <p class="authot-tag">by: Joanna</p>
           <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Labore est veritatis perferendis magni sit
             maiores!</p>
-          <div class="read-btn"><a href="#" target="_blank">Read More</a></div>
+          <a href="#" target="_blank" class="btn">Read More</a>
         </div>
       </div>
     </aside>
@@ -122,7 +123,6 @@
     <!-- Contact form -->
     <div class="cont-form">
       <form action="#">
-
         <label for="fname">First Name</label>
         <input type="text" id="fname" name="firstname" placeholder="Your name..">
 
@@ -132,8 +132,7 @@
         <label for="subject">Your message</label>
         <textarea id="subject" name="subject" placeholder="Write something.."></textarea>
 
-        <input type="submit" value="Send">
-
+        <input class="btn" type="submit" value="Send your message">
       </form>
     </div>
 
@@ -141,22 +140,29 @@
 
   </div>
   <footer>
+
     <div class="ft-txt">
       <figure>
         <img src="/photos/Knotab-foot.png" alt="Knot a Bene logo.">
       </figure>
-      <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Debitis aspernatur perferendis excepturi aperiam
+
+      <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Debitis
+        aspernatur perferendis excepturi aperiam
         ipsum laborum veniam unde quisquam pariatur. Magnam nisi beatae veniam officia quam numquam excepturi hic quos
         dolorem?</p>
     </div>
+
     <div>
       <p class="ft-copy"><i class="far fa-copyright"></i>by Knot a Bene, 2021, All Rights Reserved</p>
     </div>
+
     <div class="soc-icons" id="ft-social">
-      <ul><a href="https://www.instagram.com/knot_a_bene/" target="_blank"><i class="fab fa-instagram-square"></i></a></ul>
-      <ul><a href="https://www.facebook.com/" target="_blank"></a><i class="fab fa-facebook-square"></i></ul>
-      <ul><a href="https://twitter.com/explore" target="_blank"></a><i class="fab fa-twitter-square"></i></ul>
+      <ul><a href="https://www.instagram.com/knot_a_bene/" target="_blank"><i class="fab fa-instagram-square"></i></a>
+      </ul>
+      <ul><a href="https://www.facebook.com/" target="_blank"><i class="fab fa-facebook-square"></i></a></ul>
+      <ul><a href="https://twitter.com/explore" target="_blank"><i class="fab fa-twitter-square"></i></a></ul>
     </div>
+
   </footer>
 </body>
 

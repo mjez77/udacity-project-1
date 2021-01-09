@@ -7,15 +7,136 @@
   font-family: 'Montserrat', sans-serif;
   list-style: none;
   text-decoration: none;
+  color: #40414e;
   /* CSS variables for colors */
-  --darkgrey: #40414e;
-  --teal: #A9C3B6;
-  --khaki: #c9a782;
-  --sand: #ccb599;
+  --darkgrey: #40414e; /* var(--darkgrey)*/
+  --whiteg: #eafaf2;  /* var(--whiteg)*/
+  --teal: #A9C3B6;  /* var(--teal)*/
+  --dteal: #6f7e77; /* var(--dteal)*/
+  --khaki: #c9a782;  /* var(--khaki)*/
+  --sand: #d3bdb2;  /* var(--sand)*/
 }
 
-/* img {
+/* General styles */
+img {
   width: 100%;
   height: auto;
-} */
+}
+/* Spans, bold, italic, underlined */
 
+.bold {
+  font-weight: 500;
+  color: var(--dteal)
+}
+/* Buttons */
+a {
+  color: var(--dteal);
+}
+
+
+div {
+  display: inline block;
+}
+
+.btn {
+  display: inline-block;
+  border: 1px solid var(--dteal);
+  color: var(--dteal);
+  border-radius: 1rem;
+  padding: .4rem;
+  cursor: pointer;
+  transition: .2s;
+}
+
+.btn:hover,
+.btn a:hover {
+  color: var(--whiteg);
+  border: 1px solid var(--dteal);
+  background: var(--dteal);
+  transition: .2s;
+}
+
+/* Header general style */
+header {
+  background: var(--teal);
+  border-bottom: 2px solid var(--darkgrey);
+}
+
+/* Logo */
+#head-logo {
+  width: 12rem;
+  padding: 1rem;
+}
+
+/* Text links - #main-nav */
+header a,
+header i {
+  color: var(--whiteg);
+}
+
+#main-nav ul {
+  padding: 0 .75rem 0 .75rem;
+}
+
+#main-nav ul a {
+  font-size: 1.5rem;
+  border-bottom: 1px solid transparent;
+}
+
+#main-nav ul a:hover {
+  font-size: 1.5rem;
+  border-bottom: 1px solid var(--dteal);
+  transition: .3s;
+}
+
+
+/* Social Icons in header */
+#nav-soc ul {
+  padding: 1rem;
+}
+
+#nav-soc a {
+  font-size: 2.2rem;
+  padding:.75rem
+}
+
+#nav-soc i:hover {
+  color: var(--dteal);
+  transition: .3s;
+}
+
+/* ------------------------------ */
+/* Main contents of the site */
+
+/* Welcome from Joanna */
+#welcome {
+  padding: .5rem;
+  background-color: var(--whiteg);
+  margin: .5rem 0 .5rem 0;
+}
+
+#welcome img {
+  padding: .5rem;
+  border-radius: 50%;
+  width: 8rem;
+}
+
+#welcome h2 {
+  font-size: 1.5rem;
+  font-weight: 300;
+}
+
+/* Main post of the site */
+
+/* Footer general style */
+
+footer {
+  background: var(--darkgrey);
+  border-top: 2px solid var(--dteal);
+}
+
+footer p,
+footer a,
+footer i {
+  color: var(--sand);
+}
