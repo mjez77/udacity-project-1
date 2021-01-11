@@ -1,0 +1,316 @@
+/* CSS reset */
+* {
+  box-sizing: border-box;
+  font-family: 'Lato', sans-serif;
+  list-style: none;
+  text-decoration: none;
+  margin: 0;
+  color: #40414e;
+  /* CSS variables for colors */
+  --darkgrey: #40414e; /* var(--darkgrey)*/
+  --whiteg: #eafaf2;  /* var(--whiteg)*/
+  --teal: #A9C3B6;  /* var(--teal)*/
+  --dteal: #6f7e77; /* var(--dteal)*/
+  --khaki: #c9a782;  /* var(--khaki)*/
+  --sand: #d3bdb2;  /* var(--sand)*/
+}
+
+/*----- GENERAL STYLES ----- */
+body {
+  padding-top: 10rem; /*compensating for fix header*/
+}
+
+img {
+  width: 100%;
+  height: auto;
+  border-radius: 10px;
+}
+/* Spans, bold, italic, underlined */
+
+.bold {
+  font-weight: 500;
+  color: var(--dteal)
+}
+/* Buttons */
+a {
+  color: var(--dteal);
+}
+
+div {
+  display: inline block;
+}
+
+.btn {
+  display: inline-block;
+  border: 1px solid var(--dteal);
+  color: var(--dteal);
+  border-radius: 1rem;
+  padding: .4rem;
+  cursor: pointer;
+  transition: .2s;
+}
+
+.btn:hover,
+.btn a:hover {
+  color: var(--whiteg);
+  border: 1px solid var(--dteal);
+  background: var(--dteal);
+  transition: .2s;
+}
+
+/* -----HEADER----------------------- */
+
+/* Layouts, in mobile some flex itmes */
+header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: fixed;
+  height: 10rem;
+  top: 0;
+  width: 100%;
+}
+
+#main-nav {
+  display: flex;
+}
+
+#nav-soc ul {   /*in mobile only leave them out from main-nav*/
+  display: none;
+  flex-direction: row;
+}
+
+/* Active link  */
+.active-link {
+  color: var(--dteal);
+}
+
+/* header styles */
+header {
+  background: var(--teal);
+  border-bottom: 2px solid var(--darkgrey);
+}
+
+/* Logo */
+#head-logo {
+  width: 12rem;
+  padding: 1rem;
+}
+
+/* Text links - #main-nav */
+header a,
+header i {
+  color: var(--whiteg);
+}
+
+#main-nav ul {
+  padding: 0 .75rem 0 .75rem;
+}
+
+#main-nav ul a {
+  font-size: 1.5rem;
+  border-bottom: 1px solid transparent;
+}
+
+#main-nav ul a:hover {
+  font-size: 1.5rem;
+  border-bottom: 1px solid var(--dteal);
+  transition: .3s;
+}
+
+
+/* Social Icons in header */
+.nav-soc {
+  display: none;
+}
+
+.nav-soc ul {
+  padding: 1rem;
+}
+
+.nav-soc a {
+  font-size: 2.2rem;
+  padding:.75rem
+}
+
+.nav-soc i:hover {
+  color: var(--dteal);
+  transition: .3s;
+}
+
+/* -------CONTENT - MAIN & ASIDE----------- */
+
+.container-home {
+  margin: 0.2rem;
+}
+/* Welcome from Joanna */
+/* Layout */
+#welcome {
+  display: flex;
+  flex-direction: row-reverse;
+  text-align: center;
+  align-items: center;
+}
+
+#welcome p {
+  display: none;
+}
+
+/* welcome Style  */
+#welcome {
+  padding: .5rem;
+  background-color: var(--whiteg);
+  margin: .5rem 0 .5rem 0;
+}
+
+#welcome img {
+  padding: .5rem;
+  border-radius: 50%;
+  width: 8rem;
+}
+
+#welcome h2 {
+  font-size: 1.5rem;
+  font-weight: 300;
+}
+
+/* ----- SUBSCRIBE and CONTACT FORM ----- */
+.subscribe {
+  background: var(--dteal);
+  margin: .75rem 0;
+  border-radius: 10px;
+}
+
+.subscribe h2 {
+  text-align: center;
+  padding: .5rem;
+  font-weight: 500;
+}
+
+.subscribe h2,
+.subscribe label {
+  color: var(--whiteg);
+}
+
+.sub-form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.sub-form label {
+  padding: .5rem;
+}
+
+.sub-form input {
+  border: 0;
+  border-radius: 5px;
+  font-size: 1.2rem;
+  font-weight: 200;
+}
+
+.sub-form textarea {
+  border: 0;
+  border-radius: 5px;
+}
+
+.btn-sub {
+  cursor: pointer;
+  margin: .75rem .5rem 1.5rem 0;
+  padding: 0.5rem;
+  border-radius: 25px !important;
+  background: transparent;
+  border: 1px solid var(--whiteg);
+  color: var(--whiteg);
+}
+
+.btn-sub:hover {
+  background: var(--teal);
+  font-weight: 400;
+  transition: .3s;
+}
+
+/*----- STYLES FOR MOST RECENT POST ----- */
+
+.post-h {
+  font-size: 2rem;
+  border-bottom: 1px solid var(--darkgrey);
+  font-weight: 600;
+}
+
+.post-info {
+  padding: 0.5rem 0;
+}
+
+/* ----- STYLE FOR OLDER POSTS */
+.post-h2 {
+  font-size: 1.5rem;
+  border-bottom: 1px solid var(--darkgrey);
+  font-weight: 600;
+}
+
+/* ----- FOOTER ----- */
+
+/* Footer general style */
+
+footer {
+  background: var(--darkgrey);
+  border-top: 2px solid var(--dteal);
+}
+
+footer p,
+footer a,
+footer i {
+  color: var(--sand);
+}
+
+/* Footer logo with short note */
+.ft-text {
+  display: flex;
+  flex-direction: row;
+}
+
+.ft-txt img {
+  display: inline-block;
+  width: 45%;
+  padding: .5rem;
+}
+
+.ft-txt p {
+  display: inline-block;
+  padding: 0 .5rem 1.5rem 0;
+  width: 50%;
+  font-size: 0.7rem;
+  text-align: justify;
+}
+
+/* copyright text */
+.ft-copy {
+  font-size: 0.9rem;
+  text-align: center;
+  padding: 0.75rem;
+}
+
+/* footer social icons */
+.ft-soc ul {
+  display: flex;
+  justify-content: center;
+  flex-direction: row;
+  padding: 0;
+}
+
+.ft-soc a {
+  font-size: 2.2rem;
+  padding: 0 1rem
+}
+
+.ft-soc i:hover {
+  color: var(--teal);
+  transition: .3s;
+}
+
+/* copyright text */
+
+.fa-copyright {
+  padding-right: 0.25rem;
+}
