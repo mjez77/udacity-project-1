@@ -23,7 +23,6 @@ body {
 img {
   width: 100%;
   height: auto;
-  border-radius: 10px;
 }
 /* Spans, bold, italic, underlined */
 
@@ -31,13 +30,21 @@ img {
   font-weight: 500;
   color: var(--dteal)
 }
+
+.under {
+  text-decoration: underline;
+}
+
+.ital {
+  font-style: italic;
+}
 /* Buttons */
 a {
   color: var(--dteal);
 }
 
 div {
-  display: inline block;
+  display: inline-block;
 }
 
 .btn {
@@ -46,6 +53,7 @@ div {
   color: var(--dteal);
   border-radius: 1rem;
   padding: .4rem;
+  margin-top: 0.5rem;
   cursor: pointer;
   transition: .2s;
 }
@@ -71,7 +79,7 @@ header {
   width: 100%;
 }
 
-#main-nav {
+#main-nav ul {
   display: flex;
 }
 
@@ -103,16 +111,16 @@ header i {
   color: var(--whiteg);
 }
 
-#main-nav ul {
+#main-nav li {
   padding: 0 .75rem 0 .75rem;
 }
 
-#main-nav ul a {
+#main-nav li a {
   font-size: 1.5rem;
   border-bottom: 1px solid transparent;
 }
 
-#main-nav ul a:hover {
+#main-nav li a:hover {
   font-size: 1.5rem;
   border-bottom: 1px solid var(--dteal);
   transition: .3s;
@@ -141,13 +149,13 @@ header i {
 /* -------CONTENT - MAIN & ASIDE----------- */
 
 .container-home {
-  margin: 0.2rem;
+  margin: 0.25rem;
 }
 /* Welcome from Joanna */
 /* Layout */
 #welcome {
   display: flex;
-  flex-direction: row-reverse;
+  flex-direction: row;
   text-align: center;
   align-items: center;
 }
@@ -160,7 +168,7 @@ header i {
 #welcome {
   padding: .5rem;
   background-color: var(--whiteg);
-  margin: .5rem 0 .5rem 0;
+  margin: .25rem;
 }
 
 #welcome img {
@@ -177,8 +185,8 @@ header i {
 /* ----- SUBSCRIBE and CONTACT FORM ----- */
 .subscribe {
   background: var(--dteal);
-  margin: .75rem 0;
-  border-radius: 10px;
+  margin: .25rem;
+  width: 98%;
 }
 
 .subscribe h2 {
@@ -204,19 +212,18 @@ header i {
 
 .sub-form input {
   border: 0;
-  border-radius: 5px;
+
   font-size: 1.2rem;
   font-weight: 200;
 }
 
 .sub-form textarea {
   border: 0;
-  border-radius: 5px;
 }
 
-.btn-sub {
+.subscribe .btn-sub {
   cursor: pointer;
-  margin: .75rem .5rem 1.5rem 0;
+  margin: 1.2rem .5rem 1.5rem 0;
   padding: 0.5rem;
   border-radius: 25px !important;
   background: transparent;
@@ -224,13 +231,19 @@ header i {
   color: var(--whiteg);
 }
 
-.btn-sub:hover {
+.subscribe .btn-sub:hover {
   background: var(--teal);
-  font-weight: 400;
-  transition: .3s;
+  border: 1px solid var(--teal);
+  transition: .1s;
 }
 
 /*----- STYLES FOR MOST RECENT POST ----- */
+
+.card {
+  margin: .25rem;
+  background-color: var(--whiteg);
+  padding: .5rem;
+}
 
 .post-h {
   font-size: 2rem;
@@ -240,7 +253,25 @@ header i {
 
 .post-info {
   padding: 0.5rem 0;
+  font-size: 0.8rem;
 }
+
+.p-txt {
+  font-weight: 600;
+  padding-bottom: 0.5rem;
+}
+
+/* -----About the author----- */
+.author-bio img {
+  width: 50%;
+  border-radius: 50%;
+  margin-top: .5rem;
+}
+
+.author-bio p {
+  margin: 0.5rem 0 .5rem 0;
+}
+
 
 /* ----- STYLE FOR OLDER POSTS */
 .post-h2 {
@@ -249,6 +280,53 @@ header i {
   font-weight: 600;
 }
 
+/* Post page Archive */
+
+#arch {
+ background: var(--teal); 
+}
+
+#arch a:hover {
+  color: var(--whiteg);
+}
+
+/* STYLE FOR CARDS WITHOUT PICTURE */
+
+/* ----- STYLE FOR "POST PAGE" ----- */
+.post-container {
+  margin: .5rem;
+}
+
+.read-more {
+  text-align: center;
+  margin: 1rem 0;
+  border-bottom: 1px solid var(--darkgrey);
+  padding: .5rem;
+}
+
+/*-----The article----- */
+blockquote {
+  text-align: center;
+  margin: 1rem;
+  font-size: .9rem;
+  line-height: 1.5rem;
+
+}
+
+/* ----- Archive ----- */
+.arch {
+  background-color: var(--dteal);
+  color: var(--whiteg);
+}
+.arch h3,
+.arch a {
+  color: var(--whiteg);
+}
+
+.arch a:hover {
+  text-decoration: underline;
+  color: var(--darkgrey);
+}
 /* ----- FOOTER ----- */
 
 /* Footer general style */
@@ -256,6 +334,7 @@ header i {
 footer {
   background: var(--darkgrey);
   border-top: 2px solid var(--dteal);
+  transition: .3s;
 }
 
 footer p,
@@ -267,21 +346,25 @@ footer i {
 /* Footer logo with short note */
 .ft-text {
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
 }
 
-.ft-txt img {
-  display: inline-block;
-  width: 45%;
+.ft-logo {
+  margin: 0 auto;
+  width: 155px;
   padding: .5rem;
 }
 
 .ft-txt p {
-  display: inline-block;
-  padding: 0 .5rem 1.5rem 0;
-  width: 50%;
-  font-size: 0.7rem;
-  text-align: justify;
+  padding: .5rem .5rem 1.5rem 0;
+  margin: 0 auto;
+  width: 230px;
+  font-size: .75rem;
+  text-align: center;
+  vertical-align: top;
 }
 
 /* copyright text */

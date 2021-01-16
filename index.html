@@ -18,14 +18,15 @@
 <body>
   <header>
     <!-- Logo goes here, I haven't got SVG -->
-
     <img src="/photos/Knotab.png" alt="Knot a Bene logo." id="head-logo">
 
     <!-- Navigation -->
     <nav id="main-nav">
-      <ul><a href="index.html" class="active-link">Home</a></ul>
-      <ul><a href="#">Archive</a></ul>
-      <ul><a href="#">Contact</a></ul>
+      <ul>
+      <li><a href="index.html" class="active-link">Home</a></li>
+      <li><a href="#">Archive</a></li>
+      <li><a href="#">Contact</a></li>
+    </ul>
     </nav>
 
     <!-- Social icons -->
@@ -42,28 +43,28 @@
   <!-- Content pasrt of the site below. general layout in grid, contents of the cards set in flex -->
 
   <div class="container-home">
+ <!-- Most current post displyed here, taking largest part of screen, use imagae as background in css  -->
+  
+      <section id="welcome">
+        <img src="/photos/joanna.jpg" alt="Joanna's portrait.">
+        <h2>Hi, I'm Joanna.<br> <span class="bold">Welcome</span> to my macramé blog!</h2>
+        <p>I'm a Macramé artist based in London, Uk. I specialise in macramé home décor: wall hangings, garlands, cosaters, curtains, plant hangers and whatever my imagination conceive.</p>
+      </section>
 
-    <section id="welcome">
-      <h2>Hi, I'm Joanna.<br> <span class="bold">Welcome</span> to my macramé blog!</h2>
-      <img src="/photos/joanna.jpg" alt="Joanna's portrait.">
-      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eum ipsam asperiores numquam repudiandae obcaecati cum
-        exercitationem minus quod inventore expedita.</p>
-    </section>
-
-    <!-- Most current post displyed here, taking largest part of screen, use imagae as background in css  -->
-    <main class="last-post">
-      <h1 class="post-h">Therapeutic Macramé</h1>
-      <p class="post-info">10 January 2021 by: Joanna</p>
-      <div class="p-image"><img src="/photos/makramka.jpg" alt="Photo of a recommended book"></div>
-      <p class="inro-txt">How Macramé helped me to deal with the stress and pressure caused by pandemic.</p>
-      <a href="post.html" target="_blank" class="btn">Read More</a>
+    <main>
+      <section class="last-post card" id="last-p">
+        <h1 class="post-h">Therapeutic Macramé</h1>
+        <p class="post-info">10 January 2021 by: Joanna</p>
+        <img src="/photos/makramka.jpg" alt="Photo of a recommended book">
+        <p class="p-txt">How Macramé helped me to deal with the stress and pressure caused by pandemic.</p>
+        <a href="post.html" target="_blank" class="btn">Read More</a>
+      </section  >
     </main>
 
-    <!-- space for recent posts displayed on cards, subscribe -->
-    <aside id="recent-posts">
+<!-- space for recent posts displayed on cards, subscribe -->
 
-      <!-- Subscribe Card -->
-      <div class="subscribe">
+<!-- SUBSCRIBE CARD -->
+      <div class="subscribe" id="subs">
         <h2>Subscribe to my newsleter</h2>
         <form action="#" class="sub-form">
           <label for="name">Your name:</label>
@@ -72,46 +73,40 @@
           <input type="email" id="email" name="email" value="johndoe@email.com">
           <input class="btn-sub" type="submit" value="Subscribe">
         </form>
-        </form>
       </div>
-
-      <!-- Recent post cards go here, the two below are with picture-->
+    
+<!-- Recent post cards go here, the two below are with picture-->
+    <aside>
       <div class="card" id="rp-1">
-        <h2 class="post-h2">Post title</h2>
-        <p class="post-info">31 December 2020 by: Joanna</p>
-        <div class="p-image"><img src="/photos/book.jpg" alt="Photo of a recommended book"></div>
-        <div class="p-txt">
-          <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Labore est veritatis perferendis magni sit
-            maiores!</p>
+        <h2 class="post-h2">How it All Began...</h2>
+        <p class="post-info">31 March 2020 by: Joanna</p>
+        <img src="/photos/hanging.jpg" alt="Photo of a recommended book">       
+          <p class="p-txt">To be or (k)not to be...’ 
+            I have started a new journey and do (k)not know where it will take me... but I know for sure that it is a wonderful adventure and I enjoy it greatly and I would like to share it with you
+            ...</p>
           <a href="#" target="_blank" class="btn">Read More</a>
-        </div>
       </div>
 
       <div class="card" id="rp-2">
-        <h2 class="post-h2">Post title</h2>
-        <p class="post-info">31 December 2020 by: Joanna</p>
-        <div class="p-image"><img src="/photos/hanging.jpg" alt="Photo of a recommended book"></div>
-        <div class="p-txt">
-          <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Labore est veritatis perferendis magni sit
-            maiores!</p>
+        <h2 class="post-h2">Inspirations...</h2>
+        <p class="post-info">1 December 2020 by: Joanna</p>
+        <img src="/photos/book.jpg" alt="Photo of a recommended book">       
+          <p class="p-txt">Where do I get my inspirations from?
+            There are many sources of inspiration: books, people, macrame artists, places...</p>
           <a href="#" target="_blank" class="btn">Read More</a>
-        </div>
       </div>
 
-      <!-- the third post will be on darker background without picture -->
+<!-- the third post will be on darker background without picture -->
       <div class="card" id="rp-3">
-        <div class="p-txt">
-          <h2 class="post-h2">Post title</h2>
+          <h2 class="post-h2">Natural dying...</h2>
           <p class="post-info">25 November 2020 by: Joanna</p>
-          <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Labore est veritatis perferendis magni sit
-            maiores!</p>
+          <p class="p-txt">Easy process to experiment with natural dyies. Get the colours you really want...</p>
           <a href="#" target="_blank" class="btn">Read More</a>
-        </div>
       </div>
     </aside>
 
-    <!-- Contact form -->
-    <div class="subscribe">
+    <!-- CONTACT FORM -->
+    <div class="subscribe" id="cont-form">
       <h2>Please, use the form below if you'd like to get in touch...</h2>
       <form action="#" class="sub-form" >
         <label for="fname">First Name</label>
@@ -126,16 +121,17 @@
         <input class="btn-sub" type="submit" value="Send your message">
       </form>
     </div>
+ 
+  </div> <!-- End of container home -->
 
-
-
-  </div>
+  
   <footer>
 
     <div class="ft-txt">
-      <img src="/photos/Knotab-foot.png" alt="Knot a Bene logo.">
-      <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quibusdam eligendi eos quas dignissimos dicta
-        voluptatem cupiditate.</p>
+      <div class="ft-logo">
+        <img src="/photos/Knotab-foot.png" alt="Knot a Bene logo.">
+      </div>
+      <p>In all my work I use only highest quality, eco-friendly natural cotton cord.<br>Please, use the contact form to get in touch or for custom orders.</p>
     </div>
 
     <div class="ft-soc">
