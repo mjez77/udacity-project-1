@@ -79,10 +79,31 @@ header {
   width: 100%;
 }
 
-#main-nav ul {
+/*---- MAIN NAV ----------- */
+#main-nav {
   display: flex;
+  font-display: row;
+  justify-content: center;
 }
 
+#main-nav li {
+  padding-right: 2rem;
+}
+
+#main-nav li a {
+  padding-bottom: 0.75re;
+  border-bottom: 1px solid transparent;
+  font-size: 1.5rem;
+}
+
+#main-nav li a:hover {
+  border-bottom: 1px solid var(--dteal);
+  transition: .3s;
+}
+
+
+
+/* Social Media Icons */
 #nav-soc ul {   /*in mobile only leave them out from main-nav*/
   display: none;
   flex-direction: row;
@@ -102,7 +123,7 @@ header {
 /* Logo */
 #head-logo {
   width: 12rem;
-  padding: 1rem;
+  padding: .5rem;
 }
 
 /* Text links - #main-nav */
@@ -110,22 +131,6 @@ header a,
 header i {
   color: var(--whiteg);
 }
-
-#main-nav li {
-  padding: 0 .75rem 0 .75rem;
-}
-
-#main-nav li a {
-  font-size: 1.5rem;
-  border-bottom: 1px solid transparent;
-}
-
-#main-nav li a:hover {
-  font-size: 1.5rem;
-  border-bottom: 1px solid var(--dteal);
-  transition: .3s;
-}
-
 
 /* Social Icons in header */
 .nav-soc {
