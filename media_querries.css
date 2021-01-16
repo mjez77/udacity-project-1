@@ -201,6 +201,10 @@
       margin-top: 1rem;
     }
 
+    blockquote {
+      height: 320px;
+    }
+
   }
 
   /* Post for desktop screens */
