@@ -1,77 +1,6 @@
 @import "variables.css";
-@import "media_querries_mobile.css";
-@import "media_querries_large.css";
-@import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap');
-
-/* CSS reset */
-* {
-  box-sizing: border-box;
-  font-family: 'Lato', sans-serif;
-  list-style: none;
-  text-decoration: none;
-  margin: 0;
-  color: #40414e;
-}
-
-/*----- GENERAL STYLES ----- */
-body {
-  padding-top: 10rem; /*compensating for fix header*/
-  width: 100%;
-}
-
-img {
-  width: 100%;
-  height: auto;
-}
-/* Spans, bold, italic, underlined */
-
-.bold {
-  font-weight: 500;
-  color: var(--dteal)
-}
-
-.under {
-  text-decoration: underline;
-}
-
-.ital {
-  font-style: italic;
-}
-
-/* Buttons */
-a {
-  color: var(--dteal);
-}
-
-div {
-  display: inline-block;
-}
-
-.btn {
-  display: inline-block;
-  border: 1px solid var(--dteal);
-  color: var(--dteal);
-  border-radius: 1rem;
-  padding: .4rem;
-  margin-top: 0.5rem;
-  cursor: pointer;
-  transition: .2s;
-}
-
-.btn:hover,
-.btn a:hover {
-  color: var(--whiteg);
-  border: 1px solid var(--dteal);
-  background: var(--dteal);
-  transition: .2s;
-}
-
-figcaption,
-figcaption .fa-copyright {
-  color: #c3d6cd;
-  font-size: .75rem;
-  background: transparent;
-}
+@import "media_querries.css";
+@import "general_styles.css";
 
 /* -----HEADER----------------------- */
 
@@ -107,8 +36,6 @@ header {
   border-bottom: 1px solid var(--dteal);
   transition: .3s;
 }
-
-
 
 /* Social Media Icons */
 #nav-soc ul {   /*in mobile only leave them out from main-nav*/
