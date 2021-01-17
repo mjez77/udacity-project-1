@@ -5,9 +5,7 @@
 
 @media only screen and (min-width: 768px) {
 
-  /* Welcome bar  */
   #welcome {
-    display: flex;
     flex-direction: row;
     justify-content: center;
   }
@@ -16,16 +14,12 @@
     width: 30%;
   }
 
-
 /* Post Page for Ipad in portrait mode */
   .author-pic {
     width: 20%;
     float: left
   }
 
-  .author-pic img {
-    width: 80%;
-  }
   .author-bio p {
     display: inline-block;
     padding-top: .5rem;
@@ -124,6 +118,10 @@
       flex-direction: row;
       justify-content: space-between;
     }   
+
+    .fix {
+      color: var(--darkgrey)!important;
+    }
   }
 
 /* ----- LARGE SCREENS, DESKTOP AND LANDSCAPE IPAD */
